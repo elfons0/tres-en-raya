@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/tres-en-raya/static/css/main.a1c35199.css",
+    "main.js": "/tres-en-raya/static/js/main.a3959558.js",
+    "static/js/787.f0f1e3f9.chunk.js": "/tres-en-raya/static/js/787.f0f1e3f9.chunk.js",
+    "static/media/tic-tac-toe.png": "/tres-en-raya/static/media/tic-tac-toe.049c5348797b82f8c374.png",
+    "index.html": "/tres-en-raya/index.html",
+    "main.a1c35199.css.map": "/tres-en-raya/static/css/main.a1c35199.css.map",
+    "main.a3959558.js.map": "/tres-en-raya/static/js/main.a3959558.js.map",
+    "787.f0f1e3f9.chunk.js.map": "/tres-en-raya/static/js/787.f0f1e3f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a1c35199.css",
+    "static/js/main.a3959558.js"
+  ]
+}
