@@ -4,6 +4,8 @@ import { calculateWinner } from "../controller/GameController";
 import { startConfetti, stopConfetti } from "./Confetti";
 import { easyCPU, hardCPU } from "../controller/CpuController";
 
+import { useTranslation } from "react-i18next";
+
 export default function Board() {
   const initial = Array(9).fill("");
 
@@ -11,6 +13,8 @@ export default function Board() {
   const [squares, setSquares] = useState(initial);
   const [gameMode, setGameMode] = useState(null);
   const [turn, setTurn] = useState(0);
+
+  const { t } = useTranslation();
 
   function doMove(index) {
     if (squares[index] || calculateWinner(squares)) {
@@ -74,9 +78,9 @@ export default function Board() {
     <>
       {!gameMode && (
         <div className="buttons">
-          <button onClick={() => setGameMode("player")}>Dos Jugadores</button>
-          <button onClick={() => setGameMode("easy")}>CPU (Facil)</button>
-          <button onClick={() => setGameMode("hard")}>CPU (Dificil)</button>
+          <button onClick={() => setGameMode("players")}>{t("players")}</button>
+          <button onClick={() => setGameMode("easy")}>{t("easy")}</button>
+          <button onClick={() => setGameMode("hard")}>{t("hard")}</button>
         </div>
       )}
 
@@ -97,7 +101,7 @@ export default function Board() {
           </div>
           <div className="status">{status}</div>
 
-          {winner && <button onClick={resetBoard}>Siguiente Ronda</button>}
+          {winner && <button onClick={resetBoard}>{t("next_round")}</button>}
         </>
       )}
     </>
