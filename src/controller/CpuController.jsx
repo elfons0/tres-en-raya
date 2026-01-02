@@ -23,23 +23,34 @@ function easyCPU(squares) {
 }
 
 function hardCPU(squares, turn) {
+  let move;
   switch (turn) {
     case 0:
-      return moveTurn0();
+      move = moveTurn0();
+      break;
     case 1:
-      return moveTurn1(squares);
+      move = moveTurn1(squares);
+      break;
     case 2:
-      return moveTurn2(squares);
+      move = moveTurn2(squares);
+      break;
     case 3:
-      return moveTurn3(squares);
+      move = moveTurn3(squares);
+      break;
     case 4:
-      return moveTurn4(squares);
+      move = moveTurn4(squares);
+      break;
     case 5:
-      return moveTurn5(squares);
-
+      move = moveTurn5(squares);
+      break;
     default:
-      return moveOn(squares);
+      move = moveOn(squares);
+      break;
   }
+  if (move === null || squares[move]) {
+    return randomSquare(squares);
+  }
+  return move;
 }
 
 function moveTurn0() {
